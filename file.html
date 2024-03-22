@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDECIN</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="file.css">
+    
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"> </i>MEDHOPE.</a>
+    <body>
+    
+    
+    <nav class="navbar ">
+        <a href="#Profile">Profile</a>
+        <a href="#Documents">Documents</a>
+        <a href="#Messagerie">Messagerie</a>
+        <a href="#Agenda">Agenda</a>
+        <a href="#Deconnexion">Deconnexion</a>
+    
+    </nav>
+</header>
+
+<!-- section Documents-->
+<section class="Documents" id="Documents">
+<div class="Documents">
+  <img src="https://www.freeiconspng.com/uploads/doctor-icon-png-1.png" width="100" alt="Doctor Icon Png" />
+  <hr aligne="left" width="100%">
+<h2>Informations Personnelles</h2>
+  <ul>
+      <li>Nom: Dr. Yacine BEN</li>
+      <li>Titre: Titre du Médecin</li>
+      <li>Spécialité: Spécialité du Médecin</li>
+      <li>Adresse: Adresse du Médecin</li>
+      <li>Téléphone: Numéro de Téléphone</li>
+      <li>Email: Email du Médecin</li>
+  </ul>
+</div>
+
+</section>
+
+
+<section class="Messagerie" id="Messagerie">
+    <div class="compose-form">
+        <h2>Messagerie : </h2>
+        <form id="compose-message">
+          <input type="text" name="recipient" placeholder="Destinataire" required>
+          <input type="text" name="subject" placeholder="Sujet" required>
+          <textarea name="content" placeholder="Votre message" rows="5" required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+      <div class="message-details">
+        <div class="message-header">
+          <h2>Sujet du message :</h2>
+          <div class="message-actions">
+            <button class="reply-btn">Répondre</button>
+            <button class="delete-btn">Supprimer</button>
+          </div>
+        </div>
+        <div class="message-content">
+          Contenu du message sélectionné...
+        </div>
+      </div>
+      
+      
+</section>
+
+
+
+
+ <section class="Agenda" id="Agenda">
+
+<div class=" Liste-des-patients ">
+    <h2> Liste des PATIENTS</h2>
+    <table>
+          <thead> 
+             <tr>
+          <th>#</th>
+          <th> Nom et Prenom</th>
+          <th> Email</th>
+          <th>Date de naissance</th>
+          <th>Adresse</th>
+          <th><button class="details-button">Détails</button></th>
+            </tr>
+        </thead>
+       <tbody>
+          <tr>
+            <td>1</td>
+            <td>Hasnaoui Selma</td>
+            <td>  sellhaa768@gmail.com</td>
+            <td>18 avr 2002</td>
+            <td>Tlemcen</td>
+            <td></td>
+            </tr>
+          
+         
+          <tr>
+            <td>2</td>
+            <td>Berrezoug Doha</td>
+            <td>  dohadohaa@gmail.com</td>
+            <td>18 Nov 2004</td>
+            <td>Tlemcen</td>
+            <td></td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td> derragi Yasser</td>
+                <td>  yasserrrr@gmail.com</td>
+                <td>18 Nov 2013</td>
+                <td>Tlemcen</td>
+                <td></td>
+                </tr>
+        
+                <tr>
+                    <td>4</td>
+                    <td>  Benhamou Imad</td>
+                    <td>  Imad231@gmail.com</td>
+                    <td>18 Nov 1992</td>
+                    <td>Tlemcen</td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>  Benkelfat yacine</td>
+                        <td>  mouuuh3421278@gmail.com</td>
+                        <td>18 Nov 1988</td>
+                        <td>Tlemcen</td>
+                        <td></td>
+                        </tr>
+                       
+                        <tr>
+                          <td>6</td>
+                          <td>Berrezoug  imrane</td>
+                          <td>  imm321@gmail.com</td>
+                          <td>18 Nov 2005</td>
+                          <td>Tlemcen</td>
+                          <td></td>
+                          </tr>
+                      
+                          <tr>
+                              <td>7</td>
+                              <td>  allal Youcef</td>
+                              <td> youceff@gmail.com</td>
+                              <td>18 Nov 2008</td>
+                              <td>Tlemcen</td>
+                              <td></td>
+                              </tr>
+                              <tr>
+                                <td>8</td>
+                                <td>  Benhamou wafae</td>
+                                <td>  wafaa231@gmail.com</td>
+                                <td>18 Nov 2002</td>
+                                <td>Tlemcen</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                  <td>9</td>
+                                  <td>Berrezoug Doha</td>
+                                  <td>  dohadohaa@gmail.com</td>
+                                  <td>18 Nov 2004</td>
+                                  <td>Tlemcen</td>
+                                  <td></td>
+                                  </tr>
+             
+        </tbody>
+    </table>
+</div>
+</section>
+<div class="rendezvous-container">
+  <h2> Liste des rendez-vous</h2>
+  <table>
+      <thead>
+          <tr>
+              <th>Date</th>
+              <th>Heure</th>
+              <th>Patient</th>
+              <th>Téléphone</th>
+              <th>e-mails</th>
+              <th><button class="details-button" onclick="showDetails(this)">Détails</button></button></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>01/03/2024</td>
+              <td>10:00</td>
+              <td>Ahmed brixi</td>
+              <td>0123456789</td>
+              <td>Ahmed2@gmail.com</td>
+          </tr>
+          <tr>
+              <td>02/03/2024</td>
+              <td>11:30</td>
+              <td>salma hadhoud</td>
+              <td>9876543210</td>
+              <td>salma2001@gmail.com</td>
+          </tr>
+          <tr>
+              <td>16/01/2024</td>
+              <td>15:00</td>
+              <td>moncef bel</td>
+              <td>1425678943</td>
+              <td>moncef25@gmail.com</td>
+          </tr>
+          <tr>
+            <td>11/04/2024</td>
+            <td>15:30</td>
+            <td> Benhamou wafae </td>
+            <td>01234766789</td>
+            <td>wafae132@gmail.com</td>
+        </tr>
+        <tr>
+            <td>19/03/2024</td>
+            <td>9:30</td>
+            <td>salma limam</td>
+            <td>9876243210</td>
+            <td>salma2001@gmail.com</td>
+        </tr>
+        <tr>
+            <td>18/05/2024</td>
+            <td>13:00</td>
+            <td> imad eddin</td>
+            <td>1425218943</td>
+            <td> imad125@gmail.com</td>
+        </tr>
+          <!-- Ajoutez d'autres lignes pour plus de rendez-vous -->
+          <script src="file.css"></script>
+          <script src="fille.js"></script>
+
+      </tbody>
+  </table>
+  <section class="Deconnexion" id="Deconnexion">
+
+  
+      <div class="container">
+        <h1>Voulez vous quitter ?</h1>
+        <button class="logout-btn">Déconnexion</button>
+      </div>
+    </body>
+    </html>
+    
+
