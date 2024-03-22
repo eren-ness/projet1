@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <style>
+   
+    body {
+      background-image: url(https://cdn5.vectorstock.com/i/1000x1000/45/99/blue-wave-baground-wallpaper-vector-46764599.jpg);
+    background-color: rgb(201, 225, 231);
+      color: var(--green);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+   
+    }
+   
+        #box{
+animation-name: slideleft;
+animation-duration: 2s;
+}
+@keyframes slideleft{
+  from{transform: translateX(50%);}
+}
+       
+        </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+</head>
+<body>
+ 
+ 
+ 
+ 
+    <div id="box"><h1 >Contacter <img src="a.jpg" width="3%" height="3%" ></h1>
+ 
+   
+       
+ 
+    <form action="traitement_formulaire.php" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+ 
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+ 
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+ 
+        <button type="submit">Envoyer</button>
+        <a href="secrétaire.html">
+            <button type="button"  style="font-size: 20px; padding: 10px 20px; background-color: rgb(179, 212, 240);font-size: small;position: relative; "> 
+                retour</button>
+        </a>
+       
+    </form>
+    </div>
+   
+</body>
+</html>

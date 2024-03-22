@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordonnance Médicale</title>
+  <style>
+   body {
+ 
+ 
+background-color:#fff;
+ 
+ 
+font-family:Serif;
+ 
+ 
+font-size:15pt;
+ 
+ 
+}
+body {
+      background-image: url(https://cdn5.vectorstock.com/i/1000x1000/45/99/blue-wave-baground-wallpaper-vector-46764599.jpg);
+    background-color: rgb(201, 225, 231);
+      color: var(--green);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+   
+    }
+ 
+#page {
+ 
+ 
+margin:0;
+ 
+ 
+border:none;
+ 
+ 
+}
+ 
+ 
+#banner, #menuright, #footer {
+ 
+ 
+display:none;
+ 
+ 
+}
+ 
+ 
+h1#top {
+ 
+ 
+margin:0;
+ 
+ 
+padding:0;
+ 
+ 
+text-indent:0;
+ 
+ 
+line-height:25pt;
+ 
+ 
+font-size:25pt;
+ 
+ 
+}
+ 
+ 
+h2, h3, #content h3, #content a, a {
+ 
+ 
+color:#000;
+ 
+ 
+}
+ 
+ 
+h2 {
+ 
+ 
+padding-bottom:2pt;
+ 
+ 
+padding-left:0;
+ 
+ 
+font:bold 20pt Serif;
+ 
+ 
+border-bottom:1pt solid #000;
+ 
+ 
+}
+ 
+ 
+a {
+ 
+ 
+text-decoration:none;
+ 
+ 
+}
+ 
+ 
+a:hover {
+ 
+ 
+text-decoration:none;
+ 
+ 
+}
+ 
+ 
+p {
+ 
+ 
+  text-align:justify;
+ 
+ 
+  margin:2pt 1pt 6pt 0;
+ 
+ 
+  font-size:12pt;
+ 
+ 
+  color:#000;
+ 
+ 
+}
+ 
+ 
+#content {
+ 
+  float:none;
+ 
+ 
+  width:100%;
+ 
+ 
+  margin:0;
+ 
+ 
+  padding:0;
+ 
+ 
+  text-align:left;
+ 
+ 
+}
+ 
+ 
+#content h3 {
+ 
+ 
+  font-size:15pt;
+ 
+ 
+font-weight:bold;
+ 
+ 
+margin: 10pt 0 5pt 0;
+ 
+ 
+}
+ 
+ 
+#content a {
+ 
+ 
+  font-weight:normal;
+ 
+ 
+  text-decoration:none;
+ 
+ 
+}
+ 
+ 
+img { /* Changes: border color - units and margins */
+ 
+ 
+  float:left;
+ 
+ 
+  margin:3pt 6pt 3pt 6pt;
+ 
+ 
+  padding:8pt;
+ 
+ 
+  background:#fff;
+ 
+ 
+  border:1pt solid #000;
+ 
+ 
+}
+ 
+ 
+img.right {
+ 
+ 
+  float:right;
+ 
+ 
+}
+ 
+    #prescription {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 400px;
+      max-width: 100%;
+    }
+ 
+ 
+    .medicine {
+      margin-top: 20px;
+    }
+ 
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+ 
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+ 
+    th {
+      background-color: #f2f2f2;
+    }
+ 
+    /* Style spécifique pour l'ordonnance médicale */
+    #prescriptionForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+ 
+    label {
+      margin-top: 10px;
+    }
+ 
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-top: 5px;
+    }
+ 
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #697ee8;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+ 
+    button:hover {
+      background-color:  #697ee8;
+    }
+ 
+    /* Style pour la liste des médicaments */
+    #medicationTable {
+      margin-top: 20px;
+    }
+ 
+    .prescription-info {
+      text-align: left;
+      margin-top: 20px;
+    }
+ 
+    /* Style pour le logo médical */
+    #medicalLogo {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+ 
+    /* Style pour le nom de la clinique */
+    #clinicName {
+      color: #0084ff;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div id="prescription">
+    <!-- Logo médical et nom de la clinique -->
+   
+    <img src="EE.jpg.jpg">
+    <h3 id="clinicName">MEDHOPE</h3>
+ 
+    <h1>Ordonnance Médicale</h1>
+ 
+    <!-- Formulaire pour saisir les informations -->
+    <form id="prescriptionForm">
+      <label for="patientName">Nom du Patient :</label>
+      <input type="text" id="patientName" name="patientName" required>
+ 
+      <label for="doctorName">Nom du Médecin :</label>
+      <input type="text" id="doctorName" name="doctorName" required>
+ 
+      <label for="prescriptionDate">Date de Prescription :</label>
+      <input type="date" id="prescriptionDate" name="prescriptionDate" required>
+ 
+      <label for="clinicCode">Code de la Clinique :</label>
+      <input type="text" id="clinicCode" name="clinicCode" required>
+ 
+      <!-- Champs pour médicaments et dosages -->
+      <div id="medicationInputs">
+        <label for="medicationName">Médicament :</label>
+        <input type="text" id="medicationName" name="medicationName" required>
+ 
+        <label for="dosage">Dosage :</label>
+        <input type="text" id="dosage" name="dosage" required>
+      </div>
+ 
+      <button type="button" onclick="addMedication()">Ajouter Médicament</button>
+    </form>
+ 
+    <!-- Informations médicales ajoutées dynamiquement -->
+    <div class="medicine">
+      <h2>Médicaments Prescrits</h2>
+      <table id="medicationTable">
+        <thead>
+          <tr>
+            <th>Médicament</th>
+            <th>Dosage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Les médicaments seront ajoutés ici dynamiquement -->
+        </tbody>
+      </table>
+    </div>
+ 
+    <!-- Informations générales de l'ordonnance -->
+    <div class="prescription-info">
+      <p><strong>Nom du Patient:</strong> <span id="patientInfo"></span></p>
+      <p><strong>Médecin:</strong> <span id="doctorInfo"></span></p>
+      <p><strong>Date de Prescription:</strong> <span id="dateInfo"></span></p>
+      <p><strong>Code de la Clinique:</strong> <span id="clinicInfo"></span></p>
+    </div>
+  </div>
+ 
+  <script>
+    // Fonction pour ajouter un médicament à la liste
+    function addMedication() {
+      var medicationName = document.getElementById("medicationName").value;
+      var dosage = document.getElementById("dosage").value;
+ 
+      // Vérifier si les champs sont remplis
+      if (medicationName && dosage) {
+        // Ajouter le médicament à la table
+        var table = document.getElementById("medicationTable").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow(table.rows.length);
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        cell1.textContent = medicationName;
+        cell2.textContent = dosage;
+ 
+        // Effacer les champs du formulaire
+        document.getElementById("medicationName").value = "";
+        document.getElementById("dosage").value = "";
+      } else {
+        alert("Veuillez remplir tous les champs pour le médicament.");
+      }
+    }
+ 
+    // Fonction pour mettre à jour les informations générales de l'ordonnance
+    function updatePrescriptionInfo() {
+      var patientName = document.getElementById("patientName").value;
+      var doctorName = document.getElementById("doctorName").value;
+      var prescriptionDate = document.getElementById("prescriptionDate").value;
+      var clinicCode = document.getElementById("clinicCode").value;
+ 
+      // Afficher les informations dans la section d'informations
+      document.getElementById("patientInfo").textContent = patientName;
+      document.getElementById("doctorInfo").textContent = doctorName;
+      document.getElementById("dateInfo").textContent = prescriptionDate;
+      document.getElementById("clinicInfo").textContent = clinicCode;
+ 
+      // Afficher les informations après avoir ajouté le médicament
+      document.getElementById("prescriptionForm").style.display = "none"; // Masquer le formulaire
+      document.getElementById("prescriptionInfo").style.display = "block"; // Afficher les informations
+    }
+  </script>
+ 
+  <!-- Bouton pour déclencher la mise à jour des informations générales -->
+  <button type="button" onclick="updatePrescriptionInfo()">Mettre à jour l'Ordonnance</button>
+  <button onclick="imprimerOrdonnance()">Imprimer l'ordonnance</button>
+ 
+  <script>
+      function imprimerOrdonnance() {
+          window.print();
+      }
+  </script>
+    <a href="Sécritaire.html">
+      <button type="button"  style="font-size: 20px; padding: 10px 20px; background-color:  #0084ff;
+      font-size: small;position: relative;"> retour</button>
+  </a>
+</body>
+</html>
+

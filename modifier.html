@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <style>
+   
+    body {
+      background-image: url(https://cdn5.vectorstock.com/i/1000x1000/45/99/blue-wave-baground-wallpaper-vector-46764599.jpg);
+    background-color: rgb(201, 225, 231);
+      color: var(--green);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+   
+    }
+   
+        #box{
+animation-name: slideleft;
+animation-duration: 2s;
+}
+@keyframes slideleft{
+  from{transform: translateX(50%);}
+}
+       
+        </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+</head>
+<body>
+ 
+ 
+ 
+ 
+    <div id="box"><h1 >Contacter <img src="a.jpg" width="3%" height="3%" ></h1>
+ 
+   
+       
+ 
+    <form action="traitement_formulaire.php" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+ 
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+ 
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+ 
+        <button type="submit">Envoyer</button>
+        <a href="secrétaire.html">
+            <button type="button"  style="font-size: 20px; padding: 10px 20px; background-color: rgb(179, 212, 240);font-size: small;position: relative; "> retour</button>
+        </a>
+       
+    </form>
+    </div>
+   
+</body>
+</html>
+ 
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changer le rendez-vous médical</title>
+    <style>
+         body {
+      background-image: url(https://cdn5.vectorstock.com/i/1000x1000/45/99/blue-wave-baground-wallpaper-vector-46764599.jpg);
+    background-color: rgb(201, 225, 231);
+      color: var(--green);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+   
+    }
+ 
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #3498db; /* Dark blue background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+ 
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+ 
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+ 
+        input[type="submit"] {
+            background-color: #2c3e50; /* Darker blue button */
+            color: white;
+            cursor: pointer;
+        }
+ 
+        input[type="submit"]:hover {
+            background-color: #233140; /* Darker hover state */
+        }
+    </style>
+</head>
+<body>
+     <h2>Changer le rendez-vous médical</h2>
+    <form id="appointmentForm" action="/submit_change_request" method="post" onsubmit="return checkAvailability()">
+        <label for="patient_name">Nom du patient :</label>
+        <input type="text" id="patient_name" name="patient_name" required><br>
+        <label for="phone_number">Numéro de téléphone :</label>
+        <input type="tel" id="phone_number" name="phone_number" required><br>
+        <label for="current_date">Date du rendez-vous actuel :</label>
+        <input type="date" id="current_date" name="current_date" required><br>
+        <label for="preferred_date">Date préférée pour le changement :</label>
+        <input type="date" id="preferred_date" name="preferred_date" required><br>
+        <label for="reason">Raison du changement :</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea><br>
+        <input type="submit" value="Envoyer la demande">
+    </form>
+ 
+    <script>
+        function checkAvailability() {
+            var preferredDate = document.getElementById('preferred_date').value;
+            var currentDate = new Date();
+            var selectedDate = new Date(preferredDate);
+           
+            var currentAppointments = ["2024-03-10", "2024-03-15"]; // Add your existing appointments here
+           
+            var isDateAlreadyScheduled = currentAppointments.includes(preferredDate);
+ 
+            if (selectedDate > currentDate && !isDateAlreadyScheduled) {
+                return true;
+            } else if (isDateAlreadyScheduled) {
+                alert("Cette date a déjà été planifiée. Veuillez choisir une autre date.");
+            } else {
+                alert("La date de changement doit être dans le futur.");
+            }
+            return false;
+        }
+    </script>
+    <a href="secrétaire.html">
+        <button type="button"  style="font-size: 20px; padding: 10px 20px; background-color: rgb(179, 212, 240);font-size: small;position: relative; "> retour</button>
+    </a>
+   
+</body>
+</html>
